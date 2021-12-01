@@ -44,11 +44,11 @@ public class Magic8Ball {
          case 3:
             return "Moderate Fortune";
          case 4:
-   			return "Rising Fortune";
-   		case 5: 
-   			return "Good Fortune";
-   		default: 
-   			return "Great Fortune";
+            return "Rising Fortune";
+         case 5: 
+            return "Good Fortune";
+         default: 
+            return "Great Fortune";
       }
    }
 }
