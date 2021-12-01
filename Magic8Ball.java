@@ -2,19 +2,21 @@
 // 11/30/21
 // Final Project First Draft
 // The 8Ball class
-// Inputs that break code:
+// Gives a random response to a yes/no question and also gives a karma score that increases with repeated playthroughs.
+// Inputs that break code: Invalid filename
 
 import java.util.Scanner;
 import java.io.File;
 import java.util.Random;
 import java.util.ArrayList;
+import java.io.IOException;
 
 public class Magic8Ball {
    private ArrayList<String> responses;
    private Random random;
    
    // Constructor
-   public Magic8Ball(String fileName) {
+   public Magic8Ball(String fileName) throws IOException {
       responses = new ArrayList<String>();
       
       random = new Random();
@@ -24,11 +26,6 @@ public class Magic8Ball {
       
       while(fileReader.hasNext()) {
          responses.add(fileReader.nextLine());
-      }
-      
-      // debug loop
-      for (String s : responses) {
-         System.out.println(s);
       }
       
    }
@@ -47,7 +44,7 @@ public class Magic8Ball {
          case 3:
             return "Moderate Fortune";
          case 4:
-   			Return "Rising Fortune"
+   			return "Rising Fortune";
    		case 5: 
    			return "Good Fortune";
    		default: 
